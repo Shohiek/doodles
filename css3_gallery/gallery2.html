@@ -1,0 +1,169 @@
+
+<style>
+	li{
+		list-style: none;
+		display:inline-block;
+		color:#ffffff;
+	}
+	.toolbar{
+	    overflow-x: scroll !important; 
+	}
+	.menuTop {
+	  padding: 0.5em;
+	  background: #000;
+	  min-height: 2em;
+	  line-height: 1em;
+	  width:40%;
+	}
+	.menuTop > ul {
+	  transition: max-height 0.25s linear;
+	}
+	.menuTop ul {
+	  margin: 0;
+	  padding: 0;
+	  text-align: center;
+	}
+	.menuTop li {
+	  transition: visibility .25s linear;
+	  display: inline-block;
+	  /*border: 1px solid;*/
+	  padding: .45em 1.1em;
+	  margin: 0 .3em;
+	  position: relative;
+	}
+	
+	
+/*handles the collapsing*/
+	  .menuTop > ul {
+	    max-height: 0;
+	    overflow: hidden;
+	    margin: 0 0em 0 1em;
+	  }
+	  .menuTop li {
+	    visibility: hidden;
+	    display: block;
+	    padding: 0.5em 0.6em;
+	    border: none;
+	  }
+	  .menuTop li ul {
+	    margin-top: 0.5em;
+	    border-left: 1px solid #000;
+	  }
+	  .menuTop .navbar-handle {
+	    display: block;
+	  }
+	  #navbar-checkbox:checked + .menuTop ul {
+	    max-height: 300px;
+	  }
+	  #navbar-checkbox:checked + .menuTop li {
+	    visibility: visible;
+	  }
+	  #navbar-checkbox:checked + .menuTop .navbar-handle,
+	  #navbar-checkbox:checked + .menuTop .navbar-handle:after,
+	  #navbar-checkbox:checked + .menuTop .navbar-handle:before {
+	    border-color: #aaa;
+	  }
+/*handles the collapsing*/
+	.navbar-checkbox {
+	  display: none;
+	}
+	.navbar-handle {
+		color:#ffffff;
+	  display: none;
+	  cursor: pointer;
+	  position: relative;
+	  font-size: 45px;
+	  padding: .5em 0;
+	  height: 0;
+	  width: 1.66666667em;
+	  border-top: 0.13333333em solid;
+	}
+	.navbar-handle:before,
+	.navbar-handle:after {
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  content: ' ';
+	  border-top: 0.13333333em solid;
+	}
+	.navbar-handle:before {
+	  top: 0.37777778em;
+	}
+	.navbar-handle:after {
+	  top: 0.88888889em;
+	}
+	.menuTop {
+	  position: absolute;
+	  right: 0;
+	}
+	.menuTop .navbar-handle {
+	  position: absolute;
+	  font-size: 1.2em;
+	  top: 0.7em;
+	  right: 0.7em;
+	  z-index: 10;
+	}
+</style>
+
+<input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+<nav class="menuTop">
+  <ul>
+    <li>Home</li>
+    <li>About us</li>
+    <li>
+      Our company
+      <ul>
+        <li>History</li>
+        <li>Very long and tedious history</li>
+      </ul>
+    </li>
+    <li>Our team</li>
+    <li>Contact us</li>
+  </ul>
+  
+  <label for="navbar-checkbox" class="navbar-handle"></label>
+</nav>
+
+<!-- <div style="border:solid; height: 400px; width: 500px;">
+	
+	<!-- <div id="center_page">
+		<p>This should be center of page.</p>
+	</div>
+	 -->
+	<div class="gallerycontainer">
+		
+		<a class="thumbnail" href="#thumb"><img src="Chrysanthemum.jpg" width="100px" height="66px" border="0" />
+			<span>
+				<img src="Chrysanthemum.jpg" />
+				<br />
+				Simply beautiful.
+			</span>
+		</a>
+	
+		<a class="thumbnail" href="#thumb"><img src="media/ocean_thumb.jpg" width="100px" height="66px" border="0" /><span><img src="media/ocean.jpg" />
+			<br />
+			So real, it's unreal. Or is it?</span></a>
+		<br />
+	
+		<a class="thumbnail" href="#thumb"><img src="media/sushi2_thumb.jpg" width="100px" height="75px" border="0" /><span><img src="media/sushi2.jpg" />
+			<br />
+			Sushi for dinner anyone?</span></a>
+	
+		<a class="thumbnail" href="#thumb"><img src="media/horses_thumb.jpg" width="100px" height="70px" border="0" /><span><img src="media/horses.jpg" />
+			<br />
+			Run wild with horses.</span></a>
+	
+		<br />
+	
+		<a class="thumbnail" href="#thumb">Dynamic Drive<span><img src="media/dynamicdrive.gif" />
+			<br />
+			Dynamic Drive</span></a>
+	
+		<br />
+	
+		<a class="thumbnail" href="#thumb">Zoka Coffee<span><img src="media/zoka.gif" />
+			<br />
+			Zoka Coffee</span></a>
+	
+	</div>
+</div> -->

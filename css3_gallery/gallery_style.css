@@ -1,0 +1,73 @@
+*, body {
+	margin:0;
+	padding:0;
+}
+#imageGallery {
+	margin:25px;
+	width:500px;
+	border: 1px solid #f0f0f0;
+}
+.imageZoom ul {
+   height:131px;
+   padding:10px;
+   margin:0;
+   background: url(http://www.kulando.de/templates/blog_1575/new_greenmarinee/images/CSS3-Transition-ImageGallery-BG.jpg) 0 0 no-repeat;
+}
+.imageZoom ul li {
+	list-style: none;
+	margin:0;
+	padding:0;
+	float:left;
+	width:0;
+	height:131px;
+}
+
+.imageZoom ul li img {
+	margin:0;
+	width:0;
+	height:0;
+	border:0;
+	overflow: hidden;
+	-moz-transition: width 1s ease;
+	-webkit-transition: width 1s ease;	
+	-o-transition: width 1s ease;
+	transition: width 1s ease;
+}
+.imageZoom ul li:target img {
+	width:476px;
+	height:131px;
+	border:1px solid #f0f0f0;
+}
+.imagePreview {
+	height:60px;
+   margin:0;
+   padding:0;
+   background: #f0f0f0;
+}
+.imagePreview ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.imagePreview ul li{
+	float: left;
+	text-align: center;
+   margin:13px 15px;
+	padding:0;
+   background: #f0f0f0;
+}
+
+.imagePreview ul li img {
+   border: 1px solid #9f9f9f;
+   padding:2px;
+	margin:0;  
+	background-color: #fff;
+}
+.imagePreview ul li a {
+	outline: 0;
+}
+.imagePreview ul li a:hover img, 
+.imagePreview ul li a:active img, 
+.imagePreview ul li a:focus img {
+   border-color:#fff;
+}
